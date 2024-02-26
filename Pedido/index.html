@@ -32,7 +32,7 @@
         >
             <span class="material-symbols-outlined"> arrow_back </span> Menu
         </button>
-        <div id="error" class="error-modal" style="display: none;">
+        <div id="error" class="error-modal" style="display: none">
             <span id="error-content">Ola mundo</span>
 
             <button
@@ -44,48 +44,80 @@
             </button>
         </div>
 
-        <div class="mb-3">
-            <label for="nome-input" class="form-label"
-                >Nome</label
-            >
-            <input
-                type="text"
-                class="form-control"
-                id="nome-input"
-                placeholder="Benjamin Bloon"
-            />
+        <div class="nomeinput-div">
+            <div class="mb-3">
+                <label for="nome-input" class="form-label">Nome</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="nome-input"
+                    placeholder="Benjamin Bloon"
+                />
+            </div>
+
+            <button onclick="comecar()" class="btn btn-danger">Começar</button>
         </div>
 
-        <button onclick="comecar()" class="btn btn-danger">
-            Começar
-        </button>
-
-        <div class="selects-div" style="display: none;">
+        <div class="selects-div hidden">
             <h2>
-                Olá, <span id="nome-print"></span>, vamos começar a escolher
-                sua refeição.
+                Olá, <span id="nome-print"></span>, vamos começar a escolher sua
+                refeição.
             </h2>
             <h3>Pratos</h3>
-            <select class="form-select" aria-label="Default select example" id="selectPrato">
+            <select
+                class="form-select"
+                aria-label="Default select example"
+                id="selectPrato"
+            >
                 <option selected>Selecione um Prato</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Prato do Dia</option>
+                <option value="2">Macarronofe</option>
+                <option value="3">Lasagna a Bolonhesa</option>
             </select>
             <h3>Bebida</h3>
-            <select class="form-select" aria-label="Default select example" id="selectBebida">
+            <select
+                class="form-select"
+                aria-label="Default select example"
+                id="selectBebida"
+            >
                 <option selected>Selecione uma Bebida</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Refrigerante</option>
+                <option value="2">Suco de Laranja Natural</option>
+                <option value="3">Água</option>
             </select>
             <h3>Sobremesas</h3>
-            <select class="form-select" aria-label="Default select example" id="selectSobremesa">
+            <select
+                class="form-select"
+                aria-label="Default select example"
+                id="selectSobremesa"
+            >
                 <option selected>Selecione uma Sobremesa</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Sorvete Napolitano</option>
+                <option value="2">Pudim</option>
+                <option value="3">Torta de Limão</option>
             </select>
+
+            <div class="btn-group" role="group" aria-label="Controles">
+                <button
+                    class="btn btn-outline-danger"
+                    type="button"
+                    onclick="calcularTotal()"
+                >
+                    <span class="material-symbols-outlined"> delete </span>
+
+                    Limpar
+                </button>
+                <button
+                    class="btn btn-success"
+                    type="button"
+                    onclick="calcularTotal()"
+                >
+                    Fazer Pedido
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </button>
+            </div>
         </div>
     </body>
 </html>

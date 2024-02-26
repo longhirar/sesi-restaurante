@@ -41,3 +41,14 @@ body {
 .error-modal-hidden {
     display: none !important;
 }
+
+.selects-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.hidden {
+    display: none !important;
+}
+

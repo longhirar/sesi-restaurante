@@ -15,9 +15,12 @@ function comecar() {
     document.querySelector("#nome-print").textContent = nome;
 
     var div = document.querySelector('.selects-div');
+    var nameInputDiv = document.querySelector('.nomeinput-div');
+
 
     if(nome && nome.trim() !== '') {
-        div.style.display = 'block'
+        div.classList.remove('hidden');
+        nameInputDiv.classList.add("hidden");
     } else {
         modalError("Você precisa informar o seu nome!");
     }
