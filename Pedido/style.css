@@ -18,6 +18,10 @@ body {
     gap: .5rem;
 }
 
+.btn-fit-content {
+    max-width: fit-content;
+}
+
 .error-modal {
     position: absolute;
     top: 50%;
